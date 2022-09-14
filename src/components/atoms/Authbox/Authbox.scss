@@ -1,0 +1,31 @@
+.auth__body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f4f5f7;
+}
+
+.auth__container {
+  padding: 60px 100px;
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 10px;
+
+  [type="text"],
+  [type="email"],
+  [type="password"] {
+    box-shadow: none;
+    border: 1px solid #bdbcbc;
+    background: #fff;
+    padding: 8px 10px;
+    appearance: none;
+    border-radius: 5px;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    width: 300px;
+  }
+}

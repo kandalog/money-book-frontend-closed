@@ -1,0 +1,27 @@
+.home__body {
+  height: calc(100vh - 80px);
+  width: 100vw;
+  background: url(../../image/saving.jpg) center center / cover;
+}
+
+.home__message-box {
+  // background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  text-align: center;
+}
+
+.message__title {
+  font-size: 64px;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+}
+
+.message__subtitle {
+  font-size: 24px;
+  margin-top: 10px;
+  font-weight: bold;
+}

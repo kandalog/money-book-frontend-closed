@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/*sassの共通css*/
+$color-main: #262626;
+$color-accent: #d9d8d8;
+$color-text: #333333;
+
+// ブレークポイント
+$breakpoints: (
+  "sp": "screen and (max-width: 767px)",
+  "tab": "screen and (min-width: 768px) and (max-width: 1024px)",
+  "pc": "screen and (min-width: 1025px)",
+) !default;
+
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/*基本共通のCSS*/
+body {
+  color: #333;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+    "游ゴシック", "Yu Gothic", sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #082b48;
+  display: inline-block;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+.clear::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.is-pc {
+  @include mq("sp") {
+    display: none;
+  }
+}
+
+.is-sp {
+  @include mq("pc") {
+    display: none;
+  }
+}
+
+/* identity
+--------------------------------------------------------------*/
